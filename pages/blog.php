@@ -2,7 +2,7 @@
 include '../database/config.php';
 include '../components/header.php';
 ?>
-hello
+Azeemscheem
 <?php
 include '../components/footer.php';
 ?>
