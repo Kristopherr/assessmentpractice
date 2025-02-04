@@ -1,11 +1,11 @@
 <?php
-include '../database/config.php';
-include '../components/header.php';
+include 'database/config.php';
+include 'components/header.php';
 ?>
 <section class="bg-white dark:bg-gray-900">
     <div class="flex justify-center min-h-screen">
     <div class="hidden bg-cover lg:block lg:w-2/5  bg-origin-border p-3">
-        <img src="../assets/images/theboys.jpeg">
+        <img src="assets/images/theboys.jpeg">
     </div>
 
         <div class="flex items-center w-full max-w-3xl p-8 mx-auto lg:px-12 lg:w-3/5">
@@ -65,5 +65,5 @@ include '../components/header.php';
     </div>
 </section>
 <?php
-include '../components/footer.php';
+include 'components/footer.php';
 ?>

@@ -1,6 +1,6 @@
 <?php
-include '../database/config.php';
-include '../components/header.php';
+include 'database/config.php';
+include 'components/header.php';
 ?>
 <div class="bg-white p-4 font-sans">
       <div class="max-w-5xl max-lg:max-w-3xl max-md:max-w-md mx-auto">
@@ -70,5 +70,5 @@ include '../components/header.php';
       </div>
     </div>
 <?php
-include '../components/footer.php';
+include 'components/footer.php';
 ?>

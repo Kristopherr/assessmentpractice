@@ -1,6 +1,6 @@
 <?php
-include '../database/config.php';
-include '../components/header.php';
+include 'database/config.php';
+include 'components/header.php';
 ?>
 <!-- page -->
 <main
@@ -53,5 +53,5 @@ include '../components/header.php';
   </section>
 </main>
 <?php
-include '../components/footer.php';
+include 'components/footer.php';
 ?>

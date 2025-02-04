@@ -1,6 +1,6 @@
 <?php
-include '../database/config.php';
-include '../components/header.php';
+include 'database/config.php';
+include 'components/header.php';
 ?>
 <div class="relative bg-[#f7f6f9] h-full min-h-screen font-[sans-serif]">
     <div class="flex items-start">
@@ -499,5 +499,5 @@ include '../components/header.php';
     </div>
   </div>
 <?php
-include '../components/footer.php';
+include 'components/footer.php';
 ?>

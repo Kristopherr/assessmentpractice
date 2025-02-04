@@ -1,6 +1,6 @@
 <?php
-include '../../database/config.php';
-include '../../components/header.php';
+include 'database/config.php';
+include 'components/header.php';
 ?>
 <div class="relative font-[sans-serif] pt-[70px] h-screen">
     <header class='flex shadow-md py-1 px-4 sm:px-7 bg-white min-h-[70px] tracking-wide z-[110] fixed top-0 w-full'>
@@ -835,5 +835,5 @@ include '../../components/header.php';
     </div>
   </div>
 <?php
-include '../../components/footer.php';
+include 'components/footer.php';
 ?>

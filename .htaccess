@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteBase /assessmentpractice-1/assessmentpractice/
+
+# if the file or directory exists, skip rewriting
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite all other URLs to index.php with query parameter 'url'
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
