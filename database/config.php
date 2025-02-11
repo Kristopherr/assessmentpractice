@@ -4,7 +4,7 @@
 $hn = "localhost";
 $un = "Kristopher_Admin";
 $pw = "iJ@0joeK2h2A5]f.";
-$db = "musicKM";
+$db = "musickm";
 
 // Create database connection
 $conn = new mysqli($hn, $un, $pw, $db);

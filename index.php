@@ -10,7 +10,11 @@
             'login' => 'pages/login.php',
             'blog' => 'pages/blog.php',
             'admin' => 'pages/admin/dashboard.php',
-            'user' => 'pages/user/dashboard.php'];
+            'user' => 'pages/user/dashboard.php',
+            
+            //config file
+            'registerController' => 'controller/registerController.php',
+          ];
 
 //check if url mathes a route
 if (array_key_exists($url, $routes)){

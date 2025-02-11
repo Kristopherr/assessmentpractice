@@ -5,7 +5,7 @@ include 'components/header.php';
 <div class="font-sans ">
       <div class="grid lg:grid-cols-2 items-center lg:gap-y-6 bg-blue-500">
         <div class="max-lg:order-1 max-lg:text-center sm:p-12 p-4">
-          <h2 class="text-gray-800 lg:text-5xl text-3xl font-bold lg:!leading-[56px]">THE THE Music Blog</h2>
+          <h2 class="text-gray-800 lg:text-5xl text-3xl font-bold lg:!leading-[56px]">Harmony Hub</h2>
           <p class="text-gray-800 mt-6 text-base leading-relaxed">Laboris qui Lorem ad tempor ut reprehenderit. Nostrud anim nulla officia ea sit deserunt. Eu eu quis anim aute Laboris qui Lorem ad tempor ut reprehenderit.</p>
           <button type='button'
             class="bg-transparent border-2 border-gray-800 mt-12 transition-all text-gray-800 font-bold text-sm rounded-md px-6 py-2.5">Get Started</button>
@@ -45,13 +45,13 @@ include 'components/header.php';
             <p class="text-sm text-gray-500">Nulla facilisi. Vestibulum fringilla leo et purus consectetur, vel tincidunt dolor rhoncus. In hac habitasse platea dictumst. Fusce vel sodales elit. Suspendisse potenti. Sed eget consequat nisi.</p>
           </div>
           <div class="max-h-72">
-            <img src="https://readymadeui.com/management-img.webp" alt="Placeholder Image" class="rounded-lg object-contain w-full h-full" />
+            <img src="assets/images/djdj.jpg" alt="Placeholder Image" class="rounded-lg object-contain w-full h-full" />
           </div>
         </div>
         <hr class="border-gray-300 my-12" />
         <div class="grid md:grid-cols-2 gap-12">
           <div class="max-h-72 max-md:order-1">
-            <img src="https://readymadeui.com/analtsis.webp" alt="Placeholder Image" class="rounded-lg object-contain w-full h-full" />
+            <img src="assets/images/audio.jpg" alt="Placeholder Image" class="rounded-lg object-contain w-full h-full" />
           </div>
           <div class="text-left">
             <h2 class="text-gray-800 text-2xl font-bold mb-4">Your Success, Our Commitment</h2>
