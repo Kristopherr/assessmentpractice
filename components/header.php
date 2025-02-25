@@ -48,6 +48,7 @@ session_start();
         </div>
 
         <div class='flex max-lg:ml-auto space-x-4'>
+        <button class='px-4 py-2 text-sm rounded-full font-bold text-gray-500 border-2 bg-transparent hover:bg-gray-50 transition-all ease-in-out duration-300'><a href='<?=ROOT_DIR?>logout'>logout</a></button>
           <button class='px-4 py-2 text-sm rounded-full font-bold text-gray-500 border-2 bg-transparent hover:bg-gray-50 transition-all ease-in-out duration-300'><a href='<?=ROOT_DIR?>login'>Login</a></button>
           <button class='px-4 py-2 text-sm rounded-full font-bold text-white border-2 border-[#007bff] bg-[#007bff] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#007bff]'><a href='<?=ROOT_DIR?>register'>Sign up </a></button>
 

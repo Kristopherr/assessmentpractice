@@ -9,12 +9,14 @@
             'register' => 'pages/register.php',
             'login' => 'pages/login.php',
             'blog' => 'pages/blog.php',
+            'blogInfo' => 'pages/blogInfo.php',
             'admin' => 'pages/admin/admin-dashboard.php',
             'user' => 'pages/user/dashboard.php',
             
             //config file
             'registerController' => 'controller/registerController.php',
             'loginController' => 'controller/loginController.php',
+            'logout' => 'controller/logoutController.php',
           ];
 
 //check if url mathes a route
