@@ -22,6 +22,17 @@ $blog->store_result();
 $blog->bind_result($blogTitle, $blogBody, $blogCreatedAt, $blogContent, $status, $blogImg, $blogFName, $blogSName);
 $blog->fetch();
 
+
+$blogComment=$conn->("SELECT
+bc.content,
+bc.created_at,
+u.firstName
+FROM blog_comment bc
+inner join users u on bc.status = 'approved'");
+$blogComment->execute();
+$blogComment->store_result();
+$blogComment->bind_result($comment, $commentCreated, $firstName);
+
 ?>
 
 <section class="bg-white dark:bg-gray-900">
