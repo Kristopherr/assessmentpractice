@@ -10,13 +10,22 @@
             'login' => 'pages/login.php',
             'blog' => 'pages/blog.php',
             'blogInfo' => 'pages/blogInfo.php',
-            'admin' => 'pages/admin/admin-dashboard.php',
             'user' => 'pages/user/dashboard.php',
             
+            //admin
+            'admin/dashboard' => 'pages/admin/admin-dashboard.php', // admin page route
+            'admin/comments' => 'pages/admin/manage-comments.php', // admin page route
+            'admin/blogs' => 'pages/admin/manage-blogs.php', // admin page route
+        
+
+
             //config file
             'registerController' => 'controller/registerController.php',
             'loginController' => 'controller/loginController.php',
             'logout' => 'controller/logoutController.php',
+            'commentController' => 'controller/commentController.php',
+            'admin/approve' => 'controller/approveController.php',
+            'admin/reject' => 'controller/rejectController.php',  
           ];
 
 //check if url mathes a route

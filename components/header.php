@@ -47,20 +47,51 @@ session_start();
           </ul>
         </div>
 
-        <div class='flex max-lg:ml-auto space-x-4'>
-        <button class='px-4 py-2 text-sm rounded-full font-bold text-gray-500 border-2 bg-transparent hover:bg-gray-50 transition-all ease-in-out duration-300'><a href='<?=ROOT_DIR?>logout'>logout</a></button>
-          <button class='px-4 py-2 text-sm rounded-full font-bold text-gray-500 border-2 bg-transparent hover:bg-gray-50 transition-all ease-in-out duration-300'><a href='<?=ROOT_DIR?>login'>Login</a></button>
-          <button class='px-4 py-2 text-sm rounded-full font-bold text-white border-2 border-[#007bff] bg-[#007bff] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#007bff]'><a href='<?=ROOT_DIR?>register'>Sign up </a></button>
+        <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) : ?>
+          <?php if ($_SESSION['role'] === 'admin') : ?>
+            <li class='max-lg:border-b max-lg:py-3 px-3'>
+              <a href='<?= ROOT_DIR ?>admin/dashboard' class='hover:text-[#007bff] text-[#333] block font-semibold text-[15px]'>Dashboard</a>
+            </li>
+            <li class='max-lg:border-b max-lg:py-3 px-3'>
+              <a href='<?= ROOT_DIR ?>admin/comments' class='hover:text-[#007bff] text-[#333] block font-semibold text-[15px]'>Comments</a>
+            </li>
+            <li class='max-lg:border-b max-lg:py-3 px-3'>
+              <a href='<?= ROOT_DIR ?>admin/blogs' class='hover:text-[#007bff] text-[#333] block font-semibold text-[15px]'>Edit Blogs</a>
+            </li>
+          <?php elseif ($_SESSION['role'] === 'user') : ?>
+            <li class='max-lg:border-b max-lg:py-3 px-3'>
+              <a href='<?= ROOT_DIR ?>user/dashboard' class='hover:text-[#007bff] text-[#333] block font-semibold text-[15px]'>Dashboard</a>
+            </li>
+          <?php endif ?>
 
-          <button id="toggleOpen" class='lg:hidden'>
-            <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"></path>
-            </svg>
+    
+        <?php endif ?>
+
+        <li class='max-lg:border-b max-lg:py-3 px-3'>
+          <a href='<?= ROOT_DIR ?>contact' class='hover:text-[#007bff] text-[#333] block font-semibold text-[15px]'>Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class='flex items-center ml-auto space-x-6'>
+      <!-- Only show the login and signup buttons if the user is not logged in -->
+      <?php if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] === false) : ?>
+        <button class='font-semibold text-[15px] border-none outline-none'>
+          <a href='<?= ROOT_DIR ?>login' class='text-[#007bff] hover:underline'>Login</a>
+        </button>
+        <a href="<?= ROOT_DIR ?>register" class='px-4 py-2 text-sm rounded-sm font-bold text-white border-2 border-[#007bff] bg-[#007bff] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#007bff]'>Sign up</a>
+        <?php else : ?>
+          <button class='font-semibold text-[15px] border-none outline-none'>
+          <a href="<?= ROOT_DIR ?>logout" class='px-4 py-2 text-sm rounded-sm font-bold text-white border-2 border-[#007bff] bg-[#007bff] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#007bff]'>Logout</a>
           </button>
-        </div>
-      </div>
-    </header>
+      <?php endif ?>
+
+      <button id="toggleOpen" class='lg:hidden'>
+        <svg class="w-7 h-7" fill="#333" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
 
 <body>

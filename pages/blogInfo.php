@@ -23,12 +23,12 @@ $blog->bind_result($blogTitle, $blogBody, $blogCreatedAt, $blogContent, $status,
 $blog->fetch();
 
 
-$blogComment=$conn->("SELECT
-bc.content,
-bc.created_at,
+$blogComment=$conn->prepare("SELECT
+c.comment,
+c.created_at,
 u.firstName
-FROM blog_comment bc
-inner join users u on bc.status = 'approved'");
+FROM comments c
+inner join users u on c.status = 'Approved'");
 $blogComment->execute();
 $blogComment->store_result();
 $blogComment->bind_result($comment, $commentCreated, $firstName);
@@ -64,6 +64,46 @@ $blogComment->bind_result($comment, $commentCreated, $firstName);
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- component -->
+    <div>
+
+    <section class="rounded-b-lg  mt-4 ">
+    
+
+    <form action="/" accept-charset="UTF-8" method="post"><input type="hidden" >
+    <textarea class="w-full shadow-inner p-4 border-0 mb-4 rounded-lg focus:shadow-outline text-2xl" placeholder="Ask questions here." cols="6" rows="6" id="comment_content" spellcheck="false"></textarea>
+    <button class="font-bold py-2 px-4 w-full bg-purple-400 text-lg text-white shadow-md rounded-lg ">Comment </button>
+    </form>
+
+    <div id="task-comments" class="pt-4">
+        <!--     comment-->
+    <div class="bg-white rounded-lg p-3  flex flex-col justify-center items-center md:items-start shadow-lg mb-4">
+    <div class="flex flex-row justify-center mr-2">
+    <img alt="avatar" width="48" height="48" class="rounded-full w-10 h-10 mr-4 shadow-lg mb-4" src="https://cdn1.iconfinder.com/data/icons/technology-devices-2/100/Profile-512.png">
+    
+    <?php if ($blogComment->num_rows == 0) : ?>
+        <p class="mt-20">No comments have been left yet </p>
+    <?php else : ?>
+
+    <?php while($blogComment->fetch()) : ?>
+    
+    <h3 class="text-purple-600 font-semibold text-lg text-center md:text-left "><?=$firstName?> </h3>
+    </div>
+
+
+    <p style="width: 90%" class="text-gray-600 text-lg text-center md:text-left "><?=$comment?> </p>
+    <p style="width: 90%" class="text-gray-600 text-lg text-center md:text-left "><?=$commentCreated?> </p>
+
+    
+    </div>
+    </div>
+    <?php endwhile ?>
+    <?php endif ?>
+ 
+    </section>
+
     </div>
 </section>
 
